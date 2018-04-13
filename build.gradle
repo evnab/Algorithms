@@ -1,9 +1,22 @@
-
+apply plugin: "jacoco"
 apply plugin: 'java'
 
 repositories {
   mavenLocal()
   mavenCentral()
+}
+
+jacoco {
+  toolVersion = "0.8.0"
+  reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+jacocoTestReport {
+  reports {
+    xml.enabled false
+    csv.enabled false
+    html.destination file("${buildDir}/jacocoHtml")
+  }
 }
 
 dependencies {

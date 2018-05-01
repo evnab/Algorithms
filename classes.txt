@@ -1,0 +1,2 @@
+com.williamfiset.algorithms.strings.RabinKarp
+com.williamfiset.algorithms.search.BinarySearch
